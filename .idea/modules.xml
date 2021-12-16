@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/tingyu_project/tingyu_backend/backend_mapper/backend_mapper.iml" filepath="$PROJECT_DIR$/tingyu_project/tingyu_backend/backend_mapper/backend_mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tingyu_project/tingyu_backend/backend_pojo/backend_pojo.iml" filepath="$PROJECT_DIR$/tingyu_project/tingyu_backend/backend_pojo/backend_pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tingyu_project/tingyu_backend/backend_service/backend_service.iml" filepath="$PROJECT_DIR$/tingyu_project/tingyu_backend/backend_service/backend_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tingyu_project/tingyu_backend/backend_web/backend_web.iml" filepath="$PROJECT_DIR$/tingyu_project/tingyu_backend/backend_web/backend_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tingyu_project/tingyu_customer/customer_mapper/customer_mapper.iml" filepath="$PROJECT_DIR$/tingyu_project/tingyu_customer/customer_mapper/customer_mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tingyu_project/tingyu_customer/customer_pojo/customer_pojo.iml" filepath="$PROJECT_DIR$/tingyu_project/tingyu_customer/customer_pojo/customer_pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tingyu_project/tingyu_customer/customer_service/customer_service.iml" filepath="$PROJECT_DIR$/tingyu_project/tingyu_customer/customer_service/customer_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tingyu_project/tingyu_customer/customer_web/customer_web.iml" filepath="$PROJECT_DIR$/tingyu_project/tingyu_customer/customer_web/customer_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tingyu_project/tingyu_backend/tingyu_backend.iml" filepath="$PROJECT_DIR$/tingyu_project/tingyu_backend/tingyu_backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tingyu_project/tingyu_customer/tingyu_customer.iml" filepath="$PROJECT_DIR$/tingyu_project/tingyu_customer/tingyu_customer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tingyu_project/tingyu_project.iml" filepath="$PROJECT_DIR$/tingyu_project/tingyu_project.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.codeXie.mapper.companyMapper">
+
+    <select id="selCompanyMapper"  resultType="com.codeXie.pojo.Company">
+        select * from t_company
+        <where>
+            <if test="cname!='' and cname!=null">
+                cname like concat("%",#{hname},"%")
+            </if>
+            <if test="status!='' and status!=null">
+                and status=#{status}
+            </if>
+
+        </where>
+        <if test="strong!='' and strong!=null">
+            order by ordernumber ${strong}
+        </if>
+
+        limit #{start},#{size}
+    </select>
+    <select id="selCountMapper" resultType="int">
+        select count(*) from t_company
+        <where>
+            <if test="cname!='' and cname!=null">
+                cname like concat("%",#{cname},"%")
+            </if>
+            <if test="status!='' and status!=null">
+                and status=#{status}
+            </if>
+
+        </where>
+
+    </select>
+
+    <update id="updStatusMapper" >
+        update t_company set status=#{param2}
+        <where>
+            hid in
+        <foreach collection="param1" separator="," open="(" close=")" item="item">
+            #{item}
+        </foreach>
+        </where>
+    </update>
+
+    <update id="updCompanyMapper" >
+        update t_company set
+            cname=#{company.cname},
+            cpwd=#{company.cpwd},
+            ceo=#{company.ceo},
+            cphone=#{company.cphone},
+            cmail=#{company.cmail}
+        <where>
+            cid=#{cid}
+        </where>
+    </update>
+</mapper>

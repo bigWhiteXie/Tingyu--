@@ -1,0 +1,6 @@
+com\codeXie\mapper\AdminMapper.class
+com\codeXie\mapper\HostMapper.class
+com\codeXie\mapper\MenuMapper.class
+com\codeXie\mapper\companyMapper.class
+com\codeXie\mapper\RoleMapper.class
+com\codeXie\mapper\MarriedMapper.class

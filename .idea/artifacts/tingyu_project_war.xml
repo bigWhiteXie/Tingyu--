@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="tingyu_project:war">
+    <output-path>$PROJECT_DIR$/tingyu_project/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>tingyu_project</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="${project.artifactId}-${project.version}.war">
+      <element id="artifact" artifact-name="tingyu_project:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="customer_mapper" />
+        <module name="backend_service" />
+        <module name="backend_web" />
+        <module name="backend_mapper" />
+        <module name="customer_service" />
+        <module name="customer_pojo" />
+        <module name="customer_web" />
+        <module name="backend_pojo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="backend_mapper" target="1.8" />
+      <module name="backend_pojo" target="1.8" />
+      <module name="backend_service" target="1.8" />
+      <module name="backend_web" target="1.8" />
+      <module name="customer_mapper" target="1.8" />
+      <module name="customer_pojo" target="1.8" />
+      <module name="customer_service" target="1.8" />
+      <module name="customer_web" target="1.8" />
+      <module name="tingyu_backend" target="1.8" />
+      <module name="tingyu_customer" target="1.8" />
+      <module name="tingyu_project" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

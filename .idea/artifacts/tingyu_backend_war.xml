@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="tingyu_backend:war">
+    <output-path>$PROJECT_DIR$/tingyu_project/tingyu_backend/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>tingyu_backend</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="tingyu_backend-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="tingyu_backend:war exploded" />
+    </root>
+  </artifact>
+</component>

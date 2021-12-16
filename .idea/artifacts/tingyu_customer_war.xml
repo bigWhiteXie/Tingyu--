@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="tingyu_customer:war">
+    <output-path>$PROJECT_DIR$/tingyu_project/tingyu_customer/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>tingyu_customer</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="tingyu_customer-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="tingyu_customer:war exploded" />
+    </root>
+  </artifact>
+</component>

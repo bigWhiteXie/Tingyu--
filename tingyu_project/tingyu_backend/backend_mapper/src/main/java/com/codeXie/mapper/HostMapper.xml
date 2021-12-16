@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.codeXie.mapper.HostMapper">
+    <resultMap id="rm" type="com.codeXie.pojo.Host">
+        <id column="hid" property="hid"></id>
+        <result column="hname" property="hname"></result>
+        <result column="hpwd" property="hpwd"></result>
+        <result column="hphone" property="hphone"></result>
+        <result column="starttime" property="starttime"></result>
+        <result column="status" property="status"></result>
+        <result column="strong" property="strong"></result>
+        <result column="ordernumber" property="ordernumber"></result>
+        <association property="hostPower" javaType="com.codeXie.pojo.HostPower">
+            <id column="hpid" property="hpid"></id>
+            <result column="hpstar" property="hpstar"></result>
+            <result column="hpstart_begindate" property="hpstart_begindate"></result>
+            <result column="hpstar_enddate" property="hpstart_enddate"></result>
+            <result column="hp_order_power" property="hp_order_power"></result>
+            <result column="hpstar_begintime" property="hpstart_begintime"></result>
+            <result column="hpstar_endtime" property="hpstart_endtime"></result>
+            <result column="hpdiscount" property="hpdiscount"></result>
+            <result column="hp_dis_starttime" property="hp_dis_starttime"></result>
+            <result column="hp_dis_endtime" property="hp_dis_endtime"></result>
+            <result column="hpprice" property="hpprice"></result>
+            <result column="hpcosts" property="hcosts"></result>
+            <result column="hostid" property="hostid"></result>
+        </association>
+    </resultMap>
+    <select id="selHostMapper" resultMap="rm">
+        select * from t_host h left join t_host_power hp on h.hid=hp.hostid
+        <where>
+            <if test="hname!='' and hname!=null">
+                hname like concat("%",#{hname},"%")
+            </if>
+            <if test="status!='' and status!=null">
+                and status=#{status}
+            </if>
+            <if test="hpstart!='' and hpstart!=null">
+                and hpstar=#{hpstart}
+            </if>
+            <if test="hpdiscount!='' and hpdiscount!=null">
+                and hpdiscount=#{hpdiscount}
+            </if>
+        </where>
+        <if test="strong!='' and strong!=null">
+            order by h.strong ${strong}
+        </if>
+
+        limit #{start},#{size}
+    </select>
+    <select id="selCountMapper" resultType="int">
+        select count(*) from t_host h left join t_host_power hp on h.hid=hp.hostid
+        <where>
+            <if test="hname!='' and hname!=null">
+                hname like concat("%",#{hname},"%")
+            </if>
+            <if test="status!='' and status!=null">
+                and status=#{status}
+            </if>
+            <if test="hpstart!='' and hpstart!=null">
+                and hpstar=#{hpstart}
+            </if>
+            <if test="hpdiscount!='' and hpdiscount!=null">
+                and hpdiscount=#{hpdiscount}
+            </if>
+        </where>
+
+    </select>
+
+    <update id="updStatusMapper" >
+        update t_host set status=#{param2}
+        <where>
+            hid in
+        <foreach collection="param1" separator="," open="(" close=")" item="item">
+            #{item}
+        </foreach>
+        </where>
+    </update>
+
+    <update id="updPowerMapper" >
+        update t_host_power set
+            hpstar=#{power.hpstar},
+            hpstart_begindate=#{power.hpstart_begintime},
+            hpstar_enddate=#{power.hpstart_enddate},
+            hp_order_power=#{power.hp_order_power},
+            hpdiscount=#{power.hpdiscount},
+            hpstar_begintime=#{power.hpstart_endtime},
+            hpstar_endtime=#{power.hpstart_endtime},
+            hp_dis_starttime=#{power.hp_dis_starttime},
+            hp_dis_endtime=#{power.hp_dis_endtime},
+            hpprice=#{power.hpprice},
+            hpcosts=#{power.hcosts}
+        <where>
+            hostid in
+            <foreach collection="hids" separator="," open="(" close=")" item="item">
+                #{item}
+            </foreach>
+        </where>
+    </update>
+</mapper>

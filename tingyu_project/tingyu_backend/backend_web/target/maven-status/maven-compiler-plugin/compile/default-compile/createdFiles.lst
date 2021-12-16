@@ -1,0 +1,6 @@
+com\codeXie\controller\AdminController.class
+com\codeXie\controller\MarriedController.class
+com\codeXie\controller\CompanyController.class
+com\codeXie\controller\HostController.class
+com\codeXie\controller\RoleController.class
+com\codeXie\controller\MenuController.class

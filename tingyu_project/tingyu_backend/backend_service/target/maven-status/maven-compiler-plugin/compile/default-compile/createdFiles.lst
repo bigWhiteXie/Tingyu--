@@ -1,0 +1,12 @@
+com\codeXie\service\RoleService.class
+com\codeXie\service\AdminService.class
+com\codeXie\service\Impl\AdminServiceImpl.class
+com\codeXie\service\MarriedService.class
+com\codeXie\service\Impl\HostServiceImpl.class
+com\codeXie\service\Impl\MenuServiceImpl.class
+com\codeXie\service\CompanyService.class
+com\codeXie\service\MenuService.class
+com\codeXie\service\Impl\CompanyServiceImpl.class
+com\codeXie\service\Impl\MarriedServiceImpl.class
+com\codeXie\service\HostService.class
+com\codeXie\service\Impl\RoleServiceImpl.class
